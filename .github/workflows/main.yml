@@ -18,8 +18,8 @@ env:
   secret_key: ${{secrets.AWS_SECRET_KEY}}
 
 jobs:
-  terraform:
-    name: 'Terraform'
+  build:
+    name: 'Build & Analyze'
     runs-on: ubuntu-latest
     environment: production
 
