@@ -48,8 +48,8 @@ jobs:
       uses: sonatype-nexus-community/nexus-repo-github-action@master
       with:
         serverUrl: http://3.109.200.207:8081/repository/my_repo/
-        auth-username: ${NEXUS_USERNAME}
-        auth-password: ${NEXUS_PASSWORD}
+        username: admin
+        password: ${{ secrets.NEXUS_PASSWORD }}
         format: maven2
         repository: my_repo
         coordinates: groupId=in.javahome artifactId=simple-app version=2.0.0
