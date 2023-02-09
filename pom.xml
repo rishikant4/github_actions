@@ -10,8 +10,8 @@
 	<properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <sonar.organization>ankupsatpute</sonar.organization>
-	 <sonar.projectKey>ankupsatpute_aws-repo-terraform</sonar.projectKey>	
+    <sonar.organization>rishikant4</sonar.organization>
+	 <sonar.projectKey>rishikant4_github-actions</sonar.projectKey>	
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 </properties>
 	<dependencies>
