@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: myapp
-     image: rishi236/devops:tagversion
+     image: rishi236/rishiapps:latest
      ports:
      - containerPort: 8080
 
