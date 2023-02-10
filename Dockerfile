@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:11
 EXPOSE 8080
-ADD target/springboot-images-new.jar springboot-images-new.jar
-ENTRYPOINT ["java","-jar","/springboot-images-new.jar"]
+ADD target/simple-app-2.0.0.war webapps-new.war
+ENTRYPOINT ["java","-war","/webapps-new.war"]
