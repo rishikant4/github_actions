@@ -45,6 +45,7 @@ jobs:
       run: mvn -B package org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=rishikant4_github_actions
     
     - name: Upload artifacts
+      uses: actions/upload-artifact@v3
       with:
         name: webapp
         path: /home/runner/work/github_actions/github_actions/target/simple-app-2.0.0
