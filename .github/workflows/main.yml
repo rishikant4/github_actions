@@ -43,15 +43,8 @@ jobs:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: mvn -B package org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=rishikant4_github_actions
-      
-    - name: Nexus Repo Publish
-      uses: sonatype-nexus-community/nexus-repo-github-action@master
+    
+    - name: Upload artifacts
       with:
-        serverUrl: http://3.109.200.207:8081/repository/my_repo/
-        username: admin
-        password: ${{ secrets.NEXUS_PASSWORD }}
-        format: maven2
-        repository: my_repo
-        coordinates: groupId=in.javahome artifactId=simple-app version=2.0.0
-        assets: extension=war
-        filename: ./target/simple-app-2.0.0.war
+        name: webapp
+        path: /home/runner/work/github_actions/github_actions/target/simple-app-2.0.0
