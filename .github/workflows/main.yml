@@ -17,7 +17,7 @@ on:
     
 jobs:
   build:
-    name: 'github-actions-cicd'
+    name: 'github-actions-CI'
     runs-on: ubuntu-latest
     environment: production
 
