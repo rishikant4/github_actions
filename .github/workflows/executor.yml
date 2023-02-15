@@ -6,7 +6,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: windows:2019
+      image: windows:20230205.1
       env:
         NODE_ENV: development
       ports:
