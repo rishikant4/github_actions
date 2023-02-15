@@ -21,7 +21,7 @@ jobs:
       #options: --cpus 1
     steps:
     - name: Run Windows conatiner
-      run: docker run --rm mcr.microsoft.com/windows/servercore:ltsc2019 cmd /c echo "Hello from Windows Conatiner"
+      run: docker run --rm mcr.microsoft.com/windows/servercore/insider:10.0.20348.1 cmd /c echo "Hello from Windows Conatiner"
       
     - name: Setup Maven Action
       uses: s4u/setup-maven-action@v1.2.1
