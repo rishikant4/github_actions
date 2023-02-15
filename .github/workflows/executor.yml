@@ -41,6 +41,15 @@ jobs:
         name: webapp
         path: /home/runner/work/github_actions/github_actions/target/simple-app-2.0.0
         
+    - uses: docker-practice/actions-setup-docker@master
+      timeout-minutes: 12
+    - run: |
+        set -x
+
+        docker version
+
+        docker run --rm hello-world
+        
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
