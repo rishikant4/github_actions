@@ -10,16 +10,19 @@ jobs:
      # matrix:
        # os: [ubuntu-lates ,windows-latest]
         
-    container:
-      image: docker://mcr.microsoft.com/windows/servercore:ltsc2019
-      env:
-        NODE_ENV: development
-      ports:
-        - 80
-      volumes:
-        - my_docker_volume:/volume_mount
-      options: --cpus 1
+    #container:
+     # image: node:14.16
+      #env:
+       # NODE_ENV: development
+     # ports:
+      #  - 80
+      #volumes:
+      #  - my_docker_volume:/volume_mount
+      #options: --cpus 1
     steps:
+    - name: Run Windows conatiner
+      run: docker run --rm mcr.microsoft.com/windows/servercore:ltsc2019 cmd /c echo "Hello from Windows Conatiner"
+      
     - name: Setup Maven Action
       uses: s4u/setup-maven-action@v1.2.1
       with:
