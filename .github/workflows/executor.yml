@@ -6,7 +6,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: windows:20230205.1
+      image: docker://mcr.microsoft.com/windows/servercore:ltsc2019
       env:
         NODE_ENV: development
       ports:
