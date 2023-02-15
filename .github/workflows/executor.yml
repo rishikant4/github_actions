@@ -40,13 +40,7 @@ jobs:
         
     - name: Build Code
       run: mvn -B package --file pom.xml
-      
-    - name: Sonar Scanner
-      env:
-       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=rishikant4_github_actions
-    
+  
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
