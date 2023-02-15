@@ -15,5 +15,13 @@ jobs:
         - my_docker_volume:/volume_mount
       options: --cpus 1
     steps:
-      - name: Check for dockerenv file
-        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    # Set Up The Java 
+    - name: Setup JDK 1.8
+      uses: actions/checkout@v3
+      with:
+        java-version: 1.8  
+    - name: Build Code
+      run: mvn -B package --file pom.xml
