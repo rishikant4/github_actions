@@ -76,4 +76,4 @@ jobs:
         CLUSTER_NAME: github-actions-gke
         ZONE_NAME: us-central1-c
       with:
-        args: apply -f deploy.yaml
+        args: apply -f deployment.yaml
